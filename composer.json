@@ -1,0 +1,34 @@
+{
+    "name": "fdevs/meta-page-bridge",
+    "license": "MIT",
+    "type": "library",
+    "description": "library for working with page meta data",
+    "homepage": "https://github.com/4devs/meta-page-bridge",
+    "keywords": [
+        "meta",
+        "page"
+    ],
+    "authors": [
+        {
+            "name": "Samusev Andrey",
+            "email": "andrey@4devs.org",
+            "homepage": "http://andrey.4devs.io/"
+        },
+        {
+            "name": "4devs Community",
+            "homepage": "https://github.com/4devs/meta-page-bridge/contributors"
+        }
+    ],
+    "require-dev": {},
+    "require": {
+        "php": ">=5.5",
+        "fdevs/meta-page": "~1.2"
+    },
+    "suggest": {
+    },
+    "autoload": {
+        "psr-4": {
+            "FDevs\\Bridge\\MetaPage\\": ""
+        }
+    }
+}
