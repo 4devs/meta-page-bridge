@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="f_devs.meta_page.meta_factory.class">FDevs\MetaPage\MetaFactory</parameter>
+        <parameter key="f_devs.meta_page.meta_registry.class">FDevs\MetaPage\MetaRegistry</parameter>
+        <parameter key="f_devs.meta_page.renderer.php.class">FDevs\MetaPage\Renderer\PhpRenderer</parameter>
+        <parameter key="f_devs.meta_page.type.base.class">FDevs\MetaPage\Type\BaseType</parameter>
+    </parameters>
+
+    <services>
+
+        <service id="f_devs.meta_page.meta_factory.default" class="%f_devs.meta_page.meta_factory.class%">
+            <argument type="service" id="f_devs.meta_page.meta_registry"/>
+        </service>
+        <service id="f_devs.meta_page.meta_factory" alias="f_devs.meta_page.meta_factory.default"/>
+
+        <service id="f_devs.meta_page.meta_registry" class="%f_devs.meta_page.meta_registry.class%"/>
+
+        <service id="f_devs.meta_page.renderer.php" class="%f_devs.meta_page.renderer.php.class%"/>
+        <service id="f_devs.meta_page.renderer" alias="f_devs.meta_page.renderer.php"/>
+
+        <service id="f_devs.meta_page.type.base" class="%f_devs.meta_page.type.base.class%">
+            <argument type="service" id="f_devs.meta_page.meta_factory"/>
+            <tag name="f_devs.meta_page.type"/>
+        </service>
+
+    </services>
+
+</container>
