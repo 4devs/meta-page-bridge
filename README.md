@@ -20,6 +20,7 @@ Composer will install the bundle to your project's `vendor/fdevs` directory.
 Usage
 -----
 
+ - [with locale library](https://github.com/4devs/meta-page-bridge/blob/master/Resources/doc/locale.md)
 
 License
 -------

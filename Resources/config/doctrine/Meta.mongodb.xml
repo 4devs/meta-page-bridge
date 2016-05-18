@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mongo-mapping xmlns="http://doctrine-project.org/schemas/odm/doctrine-mongo-mapping"
+                        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                        xsi:schemaLocation="http://doctrine-project.org/schemas/odm/doctrine-mongo-mapping
+                        http://doctrine-project.org/schemas/odm/doctrine-mongo-mapping.xsd">
+
+    <mapped-superclass name="FDevs\MetaPage\Model\Meta">
+        <field name="metaType" fieldName="metaType" type="string"/>
+        <field name="name" fieldName="name" type="string"/>
+        <field name="type" fieldName="type" type="string"/>
+        <field name="content" fieldName="content" type="string"/>
+    </mapped-superclass>
+
+</doctrine-mongo-mapping>
