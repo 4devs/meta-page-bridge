@@ -22,7 +22,7 @@
     "require-dev": {},
     "require": {
         "php": ">=5.5",
-        "fdevs/meta-page": "~1.2"
+        "fdevs/meta-page": "~2.0"
     },
     "suggest": {
     },
